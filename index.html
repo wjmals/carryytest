@@ -423,13 +423,13 @@ function App() {
               <span style={{color:"#94a3b8",fontWeight:700,fontSize:"14px",minWidth:"20px"}}>①</span>
               <input ref={ref1} value={input1} onChange={e=>setInput1(e.target.value)}
                 onKeyDown={e=>{if(e.key==="Enter"){if(!input2.trim())ref2.current?.focus();else handleSubmit();}}}
-                placeholder="첫 번째 빈칸" disabled={!!result} style={inputStyle}/>
+                placeholder="첫 번째 빈칸" readOnly={!!result} style={inputStyle}/>
             </div>
             <div style={{display:"flex",gap:"8px",alignItems:"center"}}>
               <span style={{color:"#94a3b8",fontWeight:700,fontSize:"14px",minWidth:"20px"}}>②</span>
               <input ref={ref2} value={input2} onChange={e=>setInput2(e.target.value)}
                 onKeyDown={e=>e.key==="Enter"&&handleSubmit()}
-                placeholder="두 번째 빈칸" disabled={!!result} style={inputStyle}/>
+                placeholder="두 번째 빈칸" readOnly={!!result} style={inputStyle}/>
             </div>
             <button onClick={handleSubmit} style={{...btnStyle,padding:"13px"}}>
               {result?(current+1>=questions.length?"결과 보기 →":"다음 →"):"확인"}
@@ -439,7 +439,7 @@ function App() {
           <div style={{display:"flex",gap:"8px"}}>
             <input ref={ref1} value={input1} onChange={e=>setInput1(e.target.value)}
               onKeyDown={e=>e.key==="Enter"&&handleSubmit()}
-              placeholder="정답을 입력하세요..." disabled={!!result} style={inputStyle}/>
+              placeholder="정답을 입력하세요..." readOnly={!!result} style={inputStyle}/>
             <button onClick={handleSubmit} style={btnStyle}>
               {result?(current+1>=questions.length?"결과 보기 →":"다음 →"):"확인"}
             </button>
