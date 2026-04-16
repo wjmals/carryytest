@@ -297,6 +297,21 @@ function App() {
             </button>
           );
         })}
+
+         {/* 추가된 모의고사 버튼 */}
+      <button onClick={startMockExam} style={{
+        gridColumn:"1 / -1",
+        background:"linear-gradient(135deg,#f59e0b,#f97316)",
+        border:"none",
+        borderRadius:"16px",
+        padding:"20px 16px",
+        cursor:"pointer",
+        textAlign:"center",
+        color:"#fff",
+        fontWeight:800
+      }}>
+        📝 모의고사 (랜덤 30문제)
+      </button>
       </div>
     </div>
   );
@@ -352,6 +367,21 @@ function App() {
     );
   }
 
+  function startMockExam() {
+  const shuffled = [...ALL_QUESTIONS].sort(() => Math.random() - 0.5);
+  const selected = shuffled.slice(0, 30);
+
+  setQuestions(selected);
+  setSelectedCat("모의고사");
+  setCurrent(0);
+  setInput1("");
+  setInput2("");
+  setResult(null);
+  setScore(0);
+  setWrongList([]);
+  setMode("quiz");
+}
+
   // ── 퀴즈 화면 ──────────────────────────────────────────────────────────────
   const q      = questions[current];
   const dual   = !!q.a2;
@@ -367,6 +397,8 @@ function App() {
     background:"linear-gradient(135deg,#3b82f6,#2563eb)", border:"none", borderRadius:"12px",
     padding:"13px 20px", color:"#fff", fontSize:"14px", fontWeight:700, cursor:"pointer", fontFamily:"inherit", whiteSpace:"nowrap"
   };
+
+  
 
   return (
     <div style={{minHeight:"100vh",display:"flex",justifyContent:"center",padding:"24px 16px"}}>
