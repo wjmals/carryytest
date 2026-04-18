@@ -26,7 +26,6 @@
 <script type="text/babel">
 
 const ALL_QUESTIONS = [
-  // 1. 물류원론
   { category:"1. 물류원론", q:"물류는 생산과 소비 사이의 ①___적, ②___적 간격을 해소하여 효용을 창출한다.", a:"장소/시간", a2:"시간/장소" },
   { category:"1. 물류원론", q:"물류의 영역 중 원재료 조달부터 생산 공정 투입 전까지를 ___라고 한다.", a:"조달물류" },
   { category:"1. 물류원론", q:"물류의 5대 기능은 운송, 보관, 하역, ___, 물류정보이다.", a:"포장" },
@@ -42,8 +41,6 @@ const ALL_QUESTIONS = [
   { category:"1. 물류원론", q:"___ 물류는 다 쓴 제품을 회수하여 재활용하는 활동을 포함한다.", a:"폐기물" },
   { category:"1. 물류원론", q:"물류센터의 ___ 설계는 전술계획 수준의 의사결정이다.", a:"공간 활용" },
   { category:"1. 물류원론", q:"___ 서비스는 물류시스템의 출력(Output) 요소에 해당한다.", a:"고객" },
-
-  // 2. 물류합리화 및 표준화
   { category:"2. 물류합리화 및 표준화", q:"물류표준화의 핵심은 시설, 장비 등의 ___을 통일하는 것이다.", a:"규격" },
   { category:"2. 물류합리화 및 표준화", q:"화물을 일정한 중량이나 크기로 단위화하는 시스템을 ___라고 한다.", a:"ULS/유닛 로드 시스템" },
   { category:"2. 물류합리화 및 표준화", q:"한국의 표준 파렛트 규격(T-11형)은 ___mm이다.", a:"1100x1100/1100*1100" },
@@ -65,8 +62,6 @@ const ALL_QUESTIONS = [
   { category:"2. 물류합리화 및 표준화", q:"___ 은 파렛트가 물류 현장에 부족하거나 편중되는 현상을 방지한다.", a:"PPS/파렛트 풀 시스템" },
   { category:"2. 물류합리화 및 표준화", q:"___ 수송은 동일 구간을 여러 차량이 중복 운행하는 비효율을 방지한다.", a:"교차" },
   { category:"2. 물류합리화 및 표준화", q:"___는 하역의 기계화를 가능하게 하는 물류 표준화의 기본 단위이다.", a:"파렛트" },
-
-  // 3. 물류비용
   { category:"3. 물류비용", q:"물류비는 재화가 공급자로부터 수요자에게 전달될 때 소비된 ___이다.", a:"경제적 가치" },
   { category:"3. 물류비용", q:"___ 물류비는 제품 판매 과정에서 발생하는 비용을 말한다.", a:"판매" },
   { category:"3. 물류비용", q:"기업 내부 자산을 사용하여 발생하는 물류비는 ___ 물류비이다.", a:"자가" },
@@ -79,8 +74,6 @@ const ALL_QUESTIONS = [
   { category:"3. 물류비용", q:"___는 물류 시설의 임차료나 보험료를 포함하는 비용 항목이다.", a:"보관비" },
   { category:"3. 물류비용", q:"___은 물류 정보 시스템의 개발 및 유지보수에 드는 비용이다.", a:"물류정보비" },
   { category:"3. 물류비용", q:"물류비의 ___ 현상은 한 부문의 비용을 줄이면 다른 부문의 비용이 늘어남을 뜻한다.", a:"상충/Trade-off" },
-
-  // 4. 고객서비스와 품질관리
   { category:"4. 고객서비스와 품질관리", q:"고객의 주문부터 인도까지 걸리는 시간을 ___이라고 한다.", a:"리드타임/주문주기" },
   { category:"4. 고객서비스와 품질관리", q:"주문받은 수량을 결품 없이 인도하는 비율을 ___이라고 한다.", a:"주문충족률/서비스율" },
   { category:"4. 고객서비스와 품질관리", q:"___은 유형성, 신뢰성, 응답성 등 5개 차원으로 서비스 품질을 측정한다.", a:"SERVQUAL" },
@@ -101,8 +94,6 @@ const ALL_QUESTIONS = [
   { category:"4. 고객서비스와 품질관리", q:"___은 제품의 파손 없이 안전하게 전달되는 정도를 의미한다.", a:"안전성" },
   { category:"4. 고객서비스와 품질관리", q:"___은 고객의 문의에 신속하게 대응하는 서비스 품질 요소이다.", a:"응답성" },
   { category:"4. 고객서비스와 품질관리", q:"___ 관리는 고객과의 관계를 지속적으로 관리하여 가치를 창출한다.", a:"CRM/고객관계관리" },
-
-  // 5. 유통과 마케팅
   { category:"5. 유통과 마케팅", q:"마케팅 4P 전략은 제품, 가격, 촉진, ___이다.", a:"유통/Place" },
   { category:"5. 유통과 마케팅", q:"___은 제조업체에서 소비자로 제품이 이동하는 경로를 의미한다.", a:"유통경로" },
   { category:"5. 유통과 마케팅", q:"___ 유통은 가능한 많은 판매점을 통해 제품을 공급하는 전략이다.", a:"집약적/집중적" },
@@ -123,8 +114,6 @@ const ALL_QUESTIONS = [
   { category:"5. 유통과 마케팅", q:"___ 상인은 상품의 소유권을 직접 가지지 않고 거래만 중개한다.", a:"대리인/중개" },
   { category:"5. 유통과 마케팅", q:"___은 온라인과 오프라인 경로를 유기적으로 통합하여 고객 경험을 강화하는 전략이다.", a:"옴니채널" },
   { category:"5. 유통과 마케팅", q:"___은 수요예측 기법 중 데이터에 가중치를 두어 계산하는 방식이다.", a:"지수평활법" },
-
-  // 6. 물류정보시스템
   { category:"6. 물류정보시스템", q:"___은 기업 간 표준 양식의 데이터를 컴퓨터로 교환하는 시스템이다.", a:"EDI" },
   { category:"6. 물류정보시스템", q:"___은 무선 주파수를 이용해 비접촉식으로 정보를 인식하는 기술이다.", a:"RFID" },
   { category:"6. 물류정보시스템", q:"___은 창고의 입출고와 재고를 실시간 관리하는 시스템이다.", a:"WMS" },
@@ -146,8 +135,6 @@ const ALL_QUESTIONS = [
   { category:"6. 물류정보시스템", q:"___은 가상 공간에 실제 물류 현장을 복제하여 시뮬레이션하는 기술이다.", a:"디지털 트윈" },
   { category:"6. 물류정보시스템", q:"___은 공급망 전체에서 화물의 흐름을 한눈에 파악하는 기능이다.", a:"가시성/Visibility" },
   { category:"6. 물류정보시스템", q:"___은 정보 시스템 간 데이터 연동을 위한 전제 조건이다.", a:"표준화" },
-
-  // 7. 물류조직과 아웃소싱
   { category:"7. 물류조직과 아웃소싱", q:"___은 물류 업무를 외부 전문 업체에 위탁하는 방식이다.", a:"3PL/3자물류" },
   { category:"7. 물류조직과 아웃소싱", q:"___은 3PL에 컨설팅과 IT 솔루션을 더해 공급망 전체를 관리한다.", a:"4PL/4자물류" },
   { category:"7. 물류조직과 아웃소싱", q:"___조직은 각 사업부 내에 물류 기능이 흩어져 있는 형태이다.", a:"분산형" },
@@ -167,8 +154,6 @@ const ALL_QUESTIONS = [
   { category:"7. 물류조직과 아웃소싱", q:"___은 조달부터 판매까지 물류의 단절을 없애는 관리 방식이다.", a:"통합 물류 관리" },
   { category:"7. 물류조직과 아웃소싱", q:"___은 시장 변화에 신속하게 대응할 수 있는 조직의 능력이다.", a:"유연성" },
   { category:"7. 물류조직과 아웃소싱", q:"___ 조직은 생산, 영업, 물류 등 기능별로 나뉘어 있는 전통적 조직이다.", a:"직능형" },
-
-  // 8. 공급망 관리
   { category:"8. 공급망 관리(SCM)", q:"___은 원재료 조달부터 최종 소비자까지의 전체 프로세스를 최적화한다.", a:"SCM" },
   { category:"8. 공급망 관리(SCM)", q:"___은 기업 내 부가가치 창출 활동을 연쇄적으로 파악하는 개념이다.", a:"가치사슬/Value Chain" },
   { category:"8. 공급망 관리(SCM)", q:"___은 공급망 상류로 갈수록 수요 정보의 왜곡이 커지는 현상이다.", a:"채찍효과" },
@@ -197,13 +182,10 @@ const CATEGORIES = ["전체", ...Array.from(new Set(ALL_QUESTIONS.map(q => q.cat
 function normalize(str) {
   return str.replace(/[\s\-·,]/g, "").toLowerCase();
 }
-
 function checkAnswer(input, answerStr) {
   const inp = normalize(input.trim());
-  const variants = answerStr.split("/").map(s => normalize(s));
-  return variants.some(v => v === inp);
+  return answerStr.split("/").map(s => normalize(s)).some(v => v === inp);
 }
-
 function fmtAnswer(answerStr) {
   return answerStr.split("/").map(s => s.trim()).join(" / ");
 }
@@ -221,21 +203,31 @@ function App() {
   const [mode,        setMode]        = useState("select");
   const [wrongList,   setWrongList]   = useState([]);
   const [animCls,     setAnimCls]     = useState("");
+  const [isRetry,     setIsRetry]     = useState(false);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
 
-  function startQuiz(cat) {
-    // 순서대로 — 셔플 없음
-    const pool = cat === "전체" ? ALL_QUESTIONS : ALL_QUESTIONS.filter(q => q.category === cat);
+  function startQuiz(cat, questionsOverride) {
+    const pool = questionsOverride
+      ? questionsOverride
+      : cat === "전체" ? ALL_QUESTIONS : ALL_QUESTIONS.filter(q => q.category === cat);
     setQuestions([...pool]);
-    setSelectedCat(cat); setCurrent(0); setInput1(""); setInput2("");
-    setResult(null); setScore(0); setWrongList([]); setMode("quiz");
+    setSelectedCat(cat);
+    setCurrent(0); setInput1(""); setInput2("");
+    setResult(null); setScore(0); setWrongList([]);
+    setMode("quiz");
+  }
+
+  function retryWrong() {
+    const wrongQs = wrongList.map(w => w.q);
+    setIsRetry(true);
+    startQuiz("오답 재도전", wrongQs);
   }
 
   function handleSubmit() {
     if (result) {
       if (current + 1 >= questions.length) setMode("done");
-      else { setCurrent(c => c+1); setInput1(""); setInput2(""); setResult(null); }
+      else { setCurrent(c => c + 1); setInput1(""); setInput2(""); setResult(null); }
       return;
     }
     const q = questions[current];
@@ -249,7 +241,7 @@ function App() {
 
     setResult(ok ? "correct" : "wrong");
     if (ok) {
-      setScore(s => s+1);
+      setScore(s => s + 1);
       setAnimCls("bounce"); setTimeout(() => setAnimCls(""), 600);
     } else {
       setWrongList(w => [...w, { q, given1: input1.trim(), given2: dual ? input2.trim() : null }]);
@@ -257,40 +249,29 @@ function App() {
     }
   }
 
-  useEffect(() => { if (mode==="quiz") ref1.current?.focus(); }, [current, mode]);
+  useEffect(() => { if (mode === "quiz") ref1.current?.focus(); }, [current, mode]);
 
-  const pct = questions.length ? Math.round(score/questions.length*100) : 0;
+  const pct = questions.length ? Math.round(score / questions.length * 100) : 0;
 
-  // ── 카테고리 선택 ──────────────────────────────────────────────────────────
+  // ── 카테고리 선택 ─────────────────────────────────────────────────────────
   if (mode === "select") return (
     <div style={{minHeight:"100vh",display:"flex",flexDirection:"column",alignItems:"center",padding:"32px 16px"}}>
       <div style={{textAlign:"center",marginBottom:"32px"}}>
         <div style={{fontSize:"52px",marginBottom:"8px"}}>📦</div>
-        <h1 style={{color:"#000000",fontSize:"26px",fontWeight:800,margin:0}}>물류관리론 퀴즈</h1>
-        <p style={{color:"#000000",fontSize:"13px",marginTop:"6px"}}>중간고사 예상문제 — 단원을 선택하세요</p>
+        <h1 style={{color:"#000",fontSize:"26px",fontWeight:800,margin:0}}>물류관리론 퀴즈</h1>
+        <p style={{color:"#000",fontSize:"13px",marginTop:"6px"}}>중간고사 예상문제 — 단원을 선택하세요</p>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(190px,1fr))",gap:"12px",width:"100%",maxWidth:"700px"}}>
         {CATEGORIES.map(cat => {
-          const cnt = cat==="전체" ? ALL_QUESTIONS.length : ALL_QUESTIONS.filter(q=>q.category===cat).length;
+          const cnt = cat === "전체" ? ALL_QUESTIONS.length : ALL_QUESTIONS.filter(q => q.category === cat).length;
           return (
-            <button key={cat} onClick={()=>startQuiz(cat)} style={{
-              background:"rgba(96,165,250,0.15)",
-              border:"1px solid rgba(96,165,250,0.35)",
-              borderRadius:"16px",
-              padding:"20px 16px",
-              cursor:"pointer",
-              textAlign:"left",
-              transition:"all 0.2s"
+            <button key={cat} onClick={() => { setIsRetry(false); startQuiz(cat); }} style={{
+              background:"rgba(96,165,250,0.15)", border:"1px solid rgba(96,165,250,0.35)",
+              borderRadius:"16px", padding:"20px 16px", cursor:"pointer", textAlign:"left", transition:"all 0.2s"
             }}
-              onMouseEnter={e=>{
-                e.currentTarget.style.transform="translateY(-3px)";
-                e.currentTarget.style.background="rgba(96,165,250,0.25)";
-              }}
-              onMouseLeave={e=>{
-                e.currentTarget.style.transform="none";
-                e.currentTarget.style.background="rgba(96,165,250,0.15)";
-              }}>
-              <div style={{color:"#000000",fontSize:"14px",fontWeight:600,marginBottom:"6px"}}>{cat}</div>
+              onMouseEnter={e => { e.currentTarget.style.transform="translateY(-3px)"; e.currentTarget.style.background="rgba(96,165,250,0.25)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform="none"; e.currentTarget.style.background="rgba(96,165,250,0.15)"; }}>
+              <div style={{color:"#000",fontSize:"14px",fontWeight:600,marginBottom:"6px"}}>{cat}</div>
               <div style={{color:"#60a5fa",fontSize:"12px",fontWeight:500}}>{cnt}문제</div>
             </button>
           );
@@ -299,7 +280,7 @@ function App() {
     </div>
   );
 
-  // ── 결과 화면 ──────────────────────────────────────────────────────────────
+  // ── 결과 화면 ─────────────────────────────────────────────────────────────
   if (mode === "done") {
     const grade = pct>=90?"🏆 우수":pct>=70?"👍 양호":pct>=50?"📚 보통":"💪 분발";
     return (
@@ -307,63 +288,86 @@ function App() {
         <div style={{background:"rgba(255,255,255,0.05)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"24px",
           padding:"36px 28px",width:"100%",maxWidth:"560px",display:"flex",flexDirection:"column",alignItems:"center",gap:"16px"}}>
           <div style={{fontSize:"52px"}}>{grade.split(" ")[0]}</div>
-          <h2 style={{color:"#000000",fontSize:"22px",fontWeight:800,margin:0}}>퀴즈 완료!</h2>
+          <h2 style={{color:"#000",fontSize:"22px",fontWeight:800,margin:0}}>퀴즈 완료!</h2>
           <div style={{width:"110px",height:"110px",borderRadius:"50%",background:"linear-gradient(135deg,#3b82f6,#8b5cf6)",
             display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
             <span style={{color:"#fff",fontSize:"26px",fontWeight:900}}>{pct}%</span>
             <span style={{color:"rgba(255,255,255,0.7)",fontSize:"12px"}}>{score}/{questions.length}</span>
           </div>
-          <p style={{color:"#000000",fontSize:"16px",fontWeight:600,margin:0}}>{grade.split(" ")[1]}</p>
+          <p style={{color:"#000",fontSize:"16px",fontWeight:600,margin:0}}>{grade.split(" ")[1]}</p>
+
           {wrongList.length > 0 && (
-            <div style={{width:"100%",maxHeight:"360px",overflowY:"auto",display:"flex",flexDirection:"column",gap:"10px"}}>
-              <h3 style={{color:"#000000",fontSize:"15px",fontWeight:700,margin:"0 0 4px"}}>❌ 틀린 문제 복습</h3>
-              {wrongList.map((w,i) => (
+            <div style={{width:"100%",maxHeight:"300px",overflowY:"auto",display:"flex",flexDirection:"column",gap:"10px"}}>
+              <h3 style={{color:"#000",fontSize:"15px",fontWeight:700,margin:"0 0 4px"}}>❌ 틀린 문제 복습</h3>
+              {wrongList.map((w, i) => (
                 <div key={i} style={{background:"rgba(239,68,68,0.08)",border:"1px solid rgba(239,68,68,0.2)",borderRadius:"12px",padding:"12px 14px"}}>
-                  <p style={{color:"#000000",fontSize:"13px",margin:"0 0 6px",lineHeight:1.6}}>
+                  <p style={{color:"#000",fontSize:"13px",margin:"0 0 6px",lineHeight:1.6}}>
                     {w.q.q.replace("①___","【①】").replace("②___","【②】").replace("___","【　】")}
                   </p>
                   {w.q.a2 ? (
                     <>
-                      <p style={{color:"#000000",fontSize:"12px",margin:"0 0 2px"}}>
+                      <p style={{color:"#000",fontSize:"12px",margin:"0 0 2px"}}>
                         내 답 ①: <span style={{color:"#ef4444"}}>{w.given1}</span>　②: <span style={{color:"#ef4444"}}>{w.given2}</span>
                       </p>
-                      <p style={{color:"#000000",fontSize:"12px",margin:0}}>
+                      <p style={{color:"#000",fontSize:"12px",margin:0}}>
                         정답 ①: <span style={{color:"#22c55e",fontWeight:700}}>{fmtAnswer(w.q.a)}</span>　②: <span style={{color:"#22c55e",fontWeight:700}}>{fmtAnswer(w.q.a2)}</span>
                       </p>
                     </>
                   ) : (
                     <>
-                      <p style={{color:"#000000",fontSize:"12px",margin:"0 0 2px"}}>내 답: <span style={{color:"#ef4444"}}>{w.given1}</span></p>
-                      <p style={{color:"#000000",fontSize:"12px",margin:0}}>정답: <span style={{color:"#22c55e",fontWeight:700}}>{fmtAnswer(w.q.a)}</span></p>
+                      <p style={{color:"#000",fontSize:"12px",margin:"0 0 2px"}}>내 답: <span style={{color:"#ef4444"}}>{w.given1}</span></p>
+                      <p style={{color:"#000",fontSize:"12px",margin:0}}>정답: <span style={{color:"#22c55e",fontWeight:700}}>{fmtAnswer(w.q.a)}</span></p>
                     </>
                   )}
                 </div>
               ))}
             </div>
           )}
-          <div style={{display:"flex",gap:"10px",width:"100%"}}>
-            <button onClick={()=>startQuiz(selectedCat)} style={{flex:1,background:"linear-gradient(135deg,#3b82f6,#2563eb)",border:"none",borderRadius:"12px",padding:"14px",color:"#fff",fontWeight:700,cursor:"pointer",fontSize:"14px",fontFamily:"inherit"}}>다시 풀기</button>
-            <button onClick={()=>setMode("select")} style={{flex:1,background:"rgba(255,255,255,0.08)",border:"1px solid rgba(255,255,255,0.15)",borderRadius:"12px",padding:"14px",color:"#000000",fontWeight:700,cursor:"pointer",fontSize:"14px",fontFamily:"inherit"}}>카테고리 선택</button>
+
+          <div style={{display:"flex",flexDirection:"column",gap:"8px",width:"100%"}}>
+            {/* 오답 재도전 버튼 — 틀린 문제 있을 때만 */}
+            {wrongList.length > 0 && (
+              <button onClick={retryWrong} style={{
+                width:"100%", background:"linear-gradient(135deg,#ef4444,#dc2626)",
+                border:"none", borderRadius:"12px", padding:"14px",
+                color:"#fff", fontWeight:800, cursor:"pointer", fontSize:"15px", fontFamily:"inherit"
+              }}>
+                🔁 틀린 문제만 다시 풀기 ({wrongList.length}문제)
+              </button>
+            )}
+            <div style={{display:"flex",gap:"8px"}}>
+              <button onClick={() => { setIsRetry(false); startQuiz(selectedCat); }} style={{
+                flex:1, background:"linear-gradient(135deg,#3b82f6,#2563eb)",
+                border:"none", borderRadius:"12px", padding:"13px",
+                color:"#fff", fontWeight:700, cursor:"pointer", fontSize:"14px", fontFamily:"inherit"
+              }}>🔄 처음부터 다시</button>
+              <button onClick={() => { setIsRetry(false); setMode("select"); }} style={{
+                flex:1, background:"rgba(0,0,0,0.06)", border:"1px solid rgba(0,0,0,0.12)",
+                borderRadius:"12px", padding:"13px",
+                color:"#000", fontWeight:700, cursor:"pointer", fontSize:"14px", fontFamily:"inherit"
+              }}>📋 단원 선택</button>
+            </div>
           </div>
         </div>
       </div>
     );
   }
 
-  // ── 퀴즈 화면 ──────────────────────────────────────────────────────────────
-  const q      = questions[current];
-  const dual   = !!q.a2;
-  const prog   = (current / questions.length) * 100;
-  const border = result==="correct" ? "#22c55e" : result==="wrong" ? "#ef4444" : "rgba(255,255,255,0.12)";
+  // ── 퀴즈 화면 ─────────────────────────────────────────────────────────────
+  const q       = questions[current];
+  const dual    = !!q.a2;
+  const prog    = (current / questions.length) * 100;
+  const border  = result==="correct" ? "#22c55e" : result==="wrong" ? "#ef4444" : "rgba(0,0,0,0.1)";
   const displayQ = q.q.replace("①___","①【　　　】").replace("②___","②【　　　】").replace("___","【　　　　】");
 
   const inputStyle = {
-    flex:1, background:"rgba(255,255,255,0.08)", border:"1.5px solid rgba(255,255,255,0.15)",
-    borderRadius:"12px", padding:"13px 16px", color:"#000000", fontSize:"15px", fontFamily:"inherit"
+    flex:1, background:"rgba(255,255,255,0.9)", border:"1.5px solid rgba(0,0,0,0.15)",
+    borderRadius:"12px", padding:"13px 16px", color:"#000", fontSize:"15px", fontFamily:"inherit"
   };
   const btnStyle = {
     background:"linear-gradient(135deg,#3b82f6,#2563eb)", border:"none", borderRadius:"12px",
-    padding:"13px 20px", color:"#fff", fontSize:"14px", fontWeight:700, cursor:"pointer", fontFamily:"inherit", whiteSpace:"nowrap"
+    padding:"13px 20px", color:"#fff", fontSize:"14px", fontWeight:700, cursor:"pointer",
+    fontFamily:"inherit", whiteSpace:"nowrap"
   };
 
   return (
@@ -371,27 +375,34 @@ function App() {
       <div style={{width:"100%",maxWidth:"640px",display:"flex",flexDirection:"column",gap:"12px"}}>
 
         <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <button onClick={()=>setMode("select")} style={{background:"transparent",border:"none",color:"#94a3b8",cursor:"pointer",fontSize:"14px",padding:"4px 0"}}>← 뒤로</button>
-          <span style={{background:"rgba(96,165,250,0.15)",color:"#60a5fa",borderRadius:"20px",padding:"4px 12px",fontSize:"12px",fontWeight:600}}>{selectedCat}</span>
+          <button onClick={() => setMode("select")} style={{background:"transparent",border:"none",color:"#94a3b8",cursor:"pointer",fontSize:"14px",padding:"4px 0"}}>← 뒤로</button>
+          <span style={{
+            background: isRetry ? "rgba(239,68,68,0.15)" : "rgba(96,165,250,0.15)",
+            color: isRetry ? "#ef4444" : "#60a5fa",
+            borderRadius:"20px", padding:"4px 12px", fontSize:"12px", fontWeight:600
+          }}>
+            {isRetry ? "🔁 오답 재도전" : selectedCat}
+          </span>
           <span style={{color:"#94a3b8",fontSize:"13px",fontWeight:600}}>{current+1} / {questions.length}</span>
         </div>
 
-        <div style={{height:"6px",background:"rgba(255,255,255,0.1)",borderRadius:"99px",overflow:"hidden"}}>
-          <div style={{height:"100%",background:"linear-gradient(90deg,#3b82f6,#60a5fa)",borderRadius:"99px",width:`${prog}%`,transition:"width 0.4s ease"}}/>
+        <div style={{height:"6px",background:"rgba(0,0,0,0.08)",borderRadius:"99px",overflow:"hidden"}}>
+          <div style={{height:"100%",
+            background: isRetry ? "linear-gradient(90deg,#ef4444,#f87171)" : "linear-gradient(90deg,#3b82f6,#60a5fa)",
+            borderRadius:"99px", width:`${prog}%`, transition:"width 0.4s ease"}}/>
         </div>
 
         <div style={{display:"flex",gap:"8px"}}>
           <span style={{background:"rgba(34,197,94,0.15)",color:"#4ade80",borderRadius:"20px",padding:"4px 12px",fontSize:"12px",fontWeight:700}}>✅ {score}점</span>
-          {wrongList.length>0 && <span style={{background:"rgba(239,68,68,0.15)",color:"#f87171",borderRadius:"20px",padding:"4px 12px",fontSize:"12px",fontWeight:700}}>❌ {wrongList.length}개</span>}
+          {wrongList.length > 0 && <span style={{background:"rgba(239,68,68,0.15)",color:"#f87171",borderRadius:"20px",padding:"4px 12px",fontSize:"12px",fontWeight:700}}>❌ {wrongList.length}개</span>}
         </div>
 
         <div className={animCls} style={{
-          background:"rgba(255,255,255,0.05)",border:`2px solid ${border}`,borderRadius:"20px",
-          padding:"28px 24px",backdropFilter:"blur(20px)",minHeight:"160px",
-          display:"flex",flexDirection:"column",gap:"16px",justifyContent:"center",transition:"border-color 0.3s"
+          background:"rgba(255,255,255,0.7)", border:`2px solid ${border}`, borderRadius:"20px",
+          padding:"28px 24px", backdropFilter:"blur(20px)", minHeight:"160px",
+          display:"flex", flexDirection:"column", gap:"16px", justifyContent:"center", transition:"border-color 0.3s"
         }}>
-          <p style={{color:"#000000",fontSize:"17px",lineHeight:1.8,margin:0,fontWeight:500}}>{displayQ}</p>
-
+          <p style={{color:"#000",fontSize:"17px",lineHeight:1.8,margin:0,fontWeight:500}}>{displayQ}</p>
           {result && (
             <div style={{borderRadius:"12px",padding:"12px 16px",fontSize:"14px",lineHeight:1.8,
               background:result==="correct"?"#dcfce7":"#fee2e2"}}>
@@ -417,27 +428,27 @@ function App() {
           <div style={{display:"flex",flexDirection:"column",gap:"8px"}}>
             <div style={{display:"flex",gap:"8px",alignItems:"center"}}>
               <span style={{color:"#94a3b8",fontWeight:700,fontSize:"14px",minWidth:"20px"}}>①</span>
-              <input ref={ref1} value={input1} onChange={e=>setInput1(e.target.value)}
-                onKeyDown={e=>{if(e.key==="Enter"){if(!input2.trim())ref2.current?.focus();else handleSubmit();}}}
+              <input ref={ref1} value={input1} onChange={e => setInput1(e.target.value)}
+                onKeyDown={e => { if(e.key==="Enter"){ if(!input2.trim()) ref2.current?.focus(); else handleSubmit(); } }}
                 placeholder="첫 번째 빈칸" readOnly={!!result} style={inputStyle}/>
             </div>
             <div style={{display:"flex",gap:"8px",alignItems:"center"}}>
               <span style={{color:"#94a3b8",fontWeight:700,fontSize:"14px",minWidth:"20px"}}>②</span>
-              <input ref={ref2} value={input2} onChange={e=>setInput2(e.target.value)}
-                onKeyDown={e=>e.key==="Enter"&&handleSubmit()}
+              <input ref={ref2} value={input2} onChange={e => setInput2(e.target.value)}
+                onKeyDown={e => e.key==="Enter" && handleSubmit()}
                 placeholder="두 번째 빈칸" readOnly={!!result} style={inputStyle}/>
             </div>
-            <button onClick={handleSubmit} style={{...btnStyle,padding:"13px"}}>
-              {result?(current+1>=questions.length?"결과 보기 →":"다음 →"):"확인"}
+            <button onClick={handleSubmit} style={{...btnStyle, padding:"13px"}}>
+              {result ? (current+1>=questions.length ? "결과 보기 →" : "다음 →") : "확인"}
             </button>
           </div>
         ) : (
           <div style={{display:"flex",gap:"8px"}}>
-            <input ref={ref1} value={input1} onChange={e=>setInput1(e.target.value)}
-              onKeyDown={e=>e.key==="Enter"&&handleSubmit()}
+            <input ref={ref1} value={input1} onChange={e => setInput1(e.target.value)}
+              onKeyDown={e => e.key==="Enter" && handleSubmit()}
               placeholder="정답을 입력하세요..." readOnly={!!result} style={inputStyle}/>
             <button onClick={handleSubmit} style={btnStyle}>
-              {result?(current+1>=questions.length?"결과 보기 →":"다음 →"):"확인"}
+              {result ? (current+1>=questions.length ? "결과 보기 →" : "다음 →") : "확인"}
             </button>
           </div>
         )}
